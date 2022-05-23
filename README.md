@@ -2,7 +2,7 @@
 
 
 
-* ## First subject
+* ## Save Greek capitals
 **Results:**
 The text in Greek capitals was saved in the file NEO_SYNTAGMA_AB.txt
 NEO_SYNTAGMA_AB.txt<br/><br/>
@@ -39,7 +39,7 @@ pdf = Huff_2019027_2019179.make_pdf(finalText)
 ```
 _Code 1.3: calculation of the probability of the appearance of the letters in Greek
 language of _NEO_SYNTAGMA_ΑΒ.txt_ , to **Huff_2019027_2019179.py**_
-* ## Second subject
+* ## Entropy of the Greek alphabet
 **Results:**
 Entropy of the Greek alphabet if the letters appear equally likely: 4.584962500721156
 
@@ -50,9 +50,10 @@ Hu = entropy.entropy(entropy.uu)
 print('\n Θέμα 2\n Εντροπία του ελληνικού αλφάβητου αν τα γράμματα 
 εμφανίζονται ισοπίθανα:', Hu)
 ```
-* ## Third subject
+* ## Entropy of the Greek alphabet based on the pdf
 **Result:**
-Entropy of the Greek alphabet based on the pdf distribution of the text: 4.0999305570789994<br/><br/>
+Entropy of the Greek alphabet based on the pdf distribution of the text: 4.0999305570789994<br/>
+
 **Code:**
 ```python
 # Third subject
@@ -61,11 +62,12 @@ print('\n Θέμα 3\n Εντροπία του ελληνικού αλφάβητ
 κατανομή pdf του κειμένου:', Hx)
 ```
 _Code 3.1: calculates the entropy of the Greek alphabet
-_NEO_SYNTAGMA_AB.txt, στο entropy_2019027_2019179.py
+_NEO_SYNTAGMA_AB.txt, στο entropy_2019027_2019179.py__
 
-* ## Forth subject
+* ## Distance Kullback Leibler of the pdf distribution by the uniform distribution u
 **Results:**
-Distance Kullback Leibler of the pdf distribution by the uniform distribution u: 0.4850319436421568<br/>
+Distance Kullback Leibler of the pdf distribution by the uniform distribution u: 0.4850319436421568
+
 **Code:**
 ```python
 # Forth subject
@@ -75,19 +77,23 @@ print('\n Θέμα 4\n Απόσταση Kullback Leibler της κατανομή
 ```
 _Code 4.1: calculates the distance Kullback Leibler, στο
 **entropy_2019027_2019179.py**_
-* ## Fifth subject
+* ## ShannonFanoElias encoded
 **Results:**
+
 ShannonFanoElias encoded text was saved to file
 NEO_SYNTAGMA_ShannonFanoElias.txt
 NEO_SYNTAGMA_ShannonFanoElias.txt
-Password of each letter:
+
+**Password of each letter:**
 {'Α': '00001', 'Β': '000110111', 'Γ': '0001111', 'Δ': '0010001', 'Ε': '00101', 'Ζ': '001110100', 'Η': '010000', <br/>
  'Θ': '01001011', 'Ι': '01011', 'Κ': '011010', 'Λ': '0111000', 'Μ': '0111100', 'Ν': '100000', 'Ξ': '100010110', <br/>
  'Ο': '10011', 'Π': '101011', 'Ρ': '101110', 'Σ': '11001', 'Τ': '11011', 'Υ': '111011', 'Φ': '11110101', <br/>
  'Χ': '11111000', 'Ψ': '11111001011', 'Ω': '1111110'}<br/><br/>
-Original text length = 128714 
-Decoded text length = 128714 
+ 
+Original text length = 128714 <br/>
+Decoded text length = 128714 <br/>
 Decoding success rate = 100.0 %<br/>
+
 **Code:**
 Main:
 ```python
@@ -101,7 +107,7 @@ f.close()
 print('\n Θέμα 5\n Το κωδικοποιημένο με ShannonFanoElias κείμενο 
 αποθηκεύτηκε στο αρχείο '
  'NEO_SYNTAGMA_ShannonFanoElias.txt')
-* ## Decoding
+# Decoding
 deco = ShannonFanoElias.decode(enco, ShannonFanoElias.main(p, 0))
 minlength = min(len(greekUpperText), len(deco))
 j = 0
@@ -115,17 +121,22 @@ minlength, '%')
 ```
 _Code 5.1: implements Shannon-Fano-Elias coding and decoding, to
 **S_F_2019179_2019027.py**_
-* ## Sixth Subject
-Results:
+* ## Save Huffman encoded text
+
+
+**Results**:
 Huffman encoded text saved to NEO_SYNTAGMA_Huffman.txt
 NEO_SYNTAGMA_Huffman.txt
-Password of each letter:
+
+**Password of each letter:**
 {'Α': '010', 'Ο': '011', 'Ι': '000', 'Σ': '1100', 'Τ': '1101', 'Ε': '1011', 'Ν': '1000', 'Η': '1001', 'Υ': '0011', 'Ρ': '11111', <br/>
 'Κ': '11100', 'Π': '11101', 'Μ': '10100', 'Ω': '00100', 'Δ': '111100', 'Λ': '111101', 'Γ': '101010', 'Θ': '001010', <br/>
 'Φ': '1010110', 'Β': '0010110', 'Χ': '0010111', 'Ξ': '10101110', 'Ψ': '101011110', 'Ζ': '101011111'}<br/><br/>
-Original text length = 128714 
-Decoded text length = 128714 
+
+Original text length = 128714 <br/>
+Decoded text length = 128714 <br/>
 Decoding success rate = 100.0 %<br/>
+
 **Code:**
 Main:
 ```python
@@ -151,12 +162,15 @@ minlength, '%')
 ```
 _Code 6.1: Huffman coding and decoding, to
 Huff_2019027_2019179.py_
-* ## Seventh subject
-Results:
-Code rendering Shannon-Fano-Elias: 0.7216129840994531 
-Code rendering with length code word 8-bit: 0.5124913196348749
-Code rendering huffman: 0.9908903275135029 
+* ## Code rendering
+**Results:**
+
+Code rendering Shannon-Fano-Elias: 0.7216129840994531 <br/>
+Code rendering with length code word 8-bit: 0.5124913196348749 <br/>
+Code rendering huffman: 0.9908903275135029 <br/>
 Code rendering length code word 8-bit: 0.5124913196348749<br/>
+
+
 **Code:**
 ```python
 # Seventh subject
@@ -171,13 +185,15 @@ print(' Απόδοση του κώδικα huffman:', Hx / lc,
  ```
 _Code 7.1: finds the code rendering Shannon-Fano-Elias - Huffman,
 and code rendering that will encode a length codeword 8-bit._
-* ## Eighth subject
-Results:
-Text length “NEO_SYNTAGMA_AB.txt”: 128714 
-Size of Shannon-Fano_Elias coded text: 91413.0 
-Size of huffman coded text: 66571.25 
-Compression rate with Shannon-Fano_Elias: 0.7102024643783893 
-Huffman compression ratio: 0.5172028683748465
+* ## Code Sizes
+**Results:**
+
+Text length “NEO_SYNTAGMA_AB.txt”: 128714 <br/>
+Size of Shannon-Fano_Elias coded text: 91413.0 <br/>
+Size of huffman coded text: 66571.25 <br/>
+Compression rate with Shannon-Fano_Elias: 0.7102024643783893 <br/>
+Huffman compression ratio: 0.5172028683748465<br/>
+
 **Code:**
 ```python
 # Eighth subject
@@ -185,8 +201,8 @@ print('\n Θέμα 8'
  '\n Το μέγεθος του κειμένου “NEO_SYNTAGMA_AB.txt”:', 
 len(greekUpperText),
 ```
-_Code 8.1: find and display the size of the NEO_SYNTAGMA_AB
-_
+_Code 8.1: find and display the size of the NEO_SYNTAGMA_AB_
+
 
 ```python
 '\n Μέγεθος που έχει το κωδικοποιημένο με Shannon-Fano_Elias κείμενο:', 
